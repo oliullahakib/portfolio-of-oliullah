@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-code-pattern {
+  background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDr55A9yYhhTeGXc8fXqKYTSaghxO8NSQYz6XI_ERv5AoNa6xyFlYXhC3dippXDJj0ribgFbPrwshyGNNtrP_oncGM6ObxbZSO2LzVlOVK1jUABkgsLzqD3jfY-9YCawTLP077SRJ4rLL60UP-6BAVeNWRQoY1QWEzkWZ3IsMmE7H2xll8UiokYbrehYCTtyj4j1kJdIxvgvndY75eHyhZSP9H6VDnNlS4mDuZcsH7W87ms2EbiYPuAuy6G_9ASa9tStzjDPMlVtuM);
+  background-repeat: repeat;
+  background-size: 400px;
+}
+
+/* *{
+  @apply border border-red-600;
+} */

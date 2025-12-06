@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en"="">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Developer Portfolio Landing Page</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#10B981",
+                        "background-light": "#F3F4F6", "background-dark": "#0D1117",
+                        "text-light": "#111827",
+                        "text-dark": "#E5E7EB",
+                        "text-secondary-light": "#4B5563",
+                        "text-secondary-dark": "#9CA3AF"
+                    },
+                    fontFamily: {
+                        display: ["Poppins", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .bg-code-pattern {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDr55A9yYhhTeGXc8fXqKYTSaghxO8NSQYz6XI_ERv5AoNa6xyFlYXhC3dippXDJj0ribgFbPrwshyGNNtrP_oncGM6ObxbZSO2LzVlOVK1jUABkgsLzqD3jfY-9YCawTLP077SRJ4rLL60UP-6BAVeNWRQoY1QWEzkWZ3IsMmE7H2xll8UiokYbrehYCTtyj4j1kJdIxvgvndY75eHyhZSP9H6VDnNlS4mDuZcsH7W87ms2EbiYPuAuy6G_9ASa9tStzjDPMlVtuM);
+            background-repeat: repeat;
+            background-size: 400px
+        }
+    </style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark">
+
+    <header class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b container mx-auto rounded-full border-gray-200 dark:border-gray-800">
+<nav class="max-w-5xl mx-auto px-4">
+<div class="flex justify-between items-center h-20">
+<a class="text-2xl font-bold text-text-light dark:text-text-dark" href="#">Oliullah<span class="text-primary">.</span></a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#skills">Skills</a>
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#education">Education</a>
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#services">Services</a>
+<a class="py-2 px-4 text-primary border border-primary rounded-full hover:bg-primary hover:text-white dark:hover:text-background-dark transition-all" href="#contact">Contact</a>
+</div>
+<div class="md:hidden">
+<button class="text-text-light dark:text-text-dark focus:outline-none">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</nav>
+</header>
+
+    <div class="relative min-h-screen flex items-center justify-center p-40">
+        <div class="absolute inset-0 dark:bg-code-pattern opacity-30"></div>
+        <main class="relative z-10 w-full max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16">
+                <div class="flex justify-center md:justify-end">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div
+                            class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-blue-500 animate-spin-slow">
+                        </div>
+                        <div class="absolute inset-1.5 bg-background-light dark:bg-background-dark rounded-full p-2">
+                            <img alt="A smiling portrait of Nahid Hassan in black and white."
+                                class="w-full h-full object-cover rounded-full filter grayscale"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl6d4QIeGo27RHZ1QG-NcBv1V9SU2iw6z-z7YUXR2zVIpRlABZR1AwCp5DcqP6lz6Pj7tqCWW_LN-k0hB1Ktd5dVF8Dgrh3xM1X9oE-mUbK5gtC1HfCgQTlVmagjIWQpGWLdYyU6RNWn6O06i-VPADKAAexAHVw9uIOAUxbKIwNsLh1-_g4DMOL1V6MfoSIoWb0cdScdbqMBdS2mG_SZ3fugH42mJBDStTSnc0Sl9XfB0kRdYIDcBrBIMs3DFvjeg_SCPUblDCmvU" />
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <p class="text-xl md:text-2xl text-text-secondary-light dark:text-text-secondary-dark mb-2">Hi. I'm
+                    </p>
+                    <h1 class="text-5xl md:text-6xl font-bold text-text-light dark:text-text-dark mb-4">Oliullah Akib,
+                    </h1>
+                    <p
+                        class="text-lg md:text-xl text-text-secondary-light dark:text-text-secondary-dark max-w-md mx-auto md:mx-0">
+                        A freelance <span class="text-primary font-semibold">&lt;Full stack Developer/&gt;</span> with
+                        10 years commercial experience creating successful websites..
+                    </p>
+                    <div class="mt-8">
+                        <a class="inline-block py-3 px-8 text-lg font-semibold text-primary border-2 border-primary rounded-full transition-all duration-300 hover:bg-primary hover:text-white dark:hover:text-background-dark focus:outline-none focus:ring-4 focus:ring-primary/50"
+                            href="#">
+                            Hire me!
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="py-16 md:py-24 relative" id="about">
+                <div class="absolute inset-0 dark:bg-code-pattern opacity-30"></div>
+                <div class="relative z-10 w-full max-w-5xl mx-auto px-4">
+                    <h2 class="text-4xl md:text-5xl font-bold text-center text-text-light dark:text-text-dark mb-12">
+                        About <span class="text-primary">Me</span>
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+                        <div class="md:col-span-2 flex justify-center">
+                            <div class="relative w-56 h-56 md:w-64 md:h-64">
+                                <div
+                                    class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-blue-500 blur-lg opacity-50">
+                                </div>
+                                <img alt="A smiling portrait of Nahid Hassan in black and white."
+                                    class="relative w-full h-full object-cover rounded-full filter grayscale"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl6d4QIeGo27RHZ1QG-NcBv1V9SU2iw6z-z7YUXR2zVIpRlABZR1AwCp5DcqP6lz6Pj7tqCWW_LN-k0hB1Ktd5dVF8Dgrh3xM1X9oE-mUbK5gtC1HfCgQTlVmagjIWQpGWLdYyU6RNWn6O06i-VPADKAAexAHVw9uIOAUxbKIwNsLh1-_g4DMOL1V6MfoSIoWb0cdScdbqMBdS2mG_SZ3fugH42mJBDStTSnc0Sl9XfB0kRdYIDcBrBIMs3DFvjeg_SCPUblDCmvU" />
+                            </div>
+                        </div>
+                        <div class="md:col-span-3 text-center md:text-left">
+                            <p class="text-lg text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                                I am a passionate Full Stack Developer with a decade of hands-on experience in building
+                                robust, scalable, and user-friendly web applications. My journey in web development
+                                began with a deep curiosity for how things work, and it has evolved into a career where
+                                I blend creative problem-solving with technical expertise.
+                            </p>
+                            <p
+                                class="mt-4 text-lg text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                                My expertise spans across the entire development lifecycle, from conceptualization and
+                                design to deployment and maintenance. I am proficient in modern technologies like <span
+                                    class="text-primary/90">React</span>, <span class="text-primary/90">Node.js</span>,
+                                <span class="text-primary/90">Python</span>, and <span
+                                    class="text-primary/90">SQL/NoSQL</span> databases. I thrive on creating seamless
+                                digital experiences that not only meet client requirements but also exceed user
+                                expectations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="py-16 sm:py-24 px-4 ">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white">Skills</h1>
+                        <p class="mt-2 text-lg text-slate-600 dark:text-slate-400">My Technical Level</p>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                        <div
+                            class="bg-white dark:bg-slate-800 p-8 rounded-DEFAULT shadow-sm border border-slate-200 dark:border-slate-700">
+                            <h2 class="text-xl font-semibold text-center text-slate-900 dark:text-white mb-8">Frontend
+                                Developer</h2>
+                            <div class="grid grid-cols-2 gap-x-8 gap-y-6">
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">HTML5</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Expert</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">Next.JS</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Expert</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">TypeScript</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Expert</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">Tailwind CSS</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">JavaScript</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Expert</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">React.JS</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Expert</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800 p-8 rounded-DEFAULT shadow-sm border border-slate-200 dark:border-slate-700">
+                            <h2 class="text-xl font-semibold text-center text-slate-900 dark:text-white mb-8">Backend
+                                Developer</h2>
+                            <div class="grid grid-cols-2 gap-x-8 gap-y-6">
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">Node.JS</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Expert</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">SQL</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">Express.JS</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Expert</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">Docker</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">MongoDB</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Expert</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <span class="material-symbols-outlined text-primary mt-1">verified</span>
+                                    <div>
+                                        <h3 class="font-semibold text-slate-900 dark:text-white">Kubernetes</h3>
+                                        <p class="text-sm text-slate-500 dark:text-slate-400">Intermediate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <section class="py-16 sm:py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                            Technologies
+                        </h2>
+                        <p class="mt-2 text-lg text-slate-600 dark:text-slate-400">
+                            My Tech Stack
+                        </p>
+                    </div>
+                    <div class="mt-12 flex justify-center items-center gap-4 sm:gap-6 flex-wrap">
+                        <div
+                            class="bg-white dark:bg-slate-800 p-4 sm:p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img alt="JavaScript logo" class="h-10 w-10 sm:h-12 sm:w-12"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOKT4-S1YOV3shw-RS_2krVzpTZpCM3ScRBPYvERyIPwVbnmUHjkb6dk-ouwwSOPxgcqOS1cJ1102IqxG4CuPNuo9l9tBYQy6dsvcdyeH0l3NqBonniXTp9-dZM86iT9XQUrpaZ4VZe7JN83lMXo48AiFTj10q0uv2CrAqZk3u9Nzu0PlRUiVp-BfzxOL6o9Ws6MKSJNTltgCnO_sUtyz3Fv_AW-XuMW6DYBQSOusW8ECn13kuqIigUnrkv1idqmZCx5qThiKcco0" />
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800 p-4 sm:p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img alt="React logo" class="h-10 w-10 sm:h-12 sm:w-12"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB5DRsYrsmdkLGuGKVzEbf_J7478cI1aKNwSbgh9WuX7tTyDAa4xlTxlRoR1VKZy5D_nvxO0AIRJCwWKhteSQ7-ZoctE8xfBPg-AJ_WV9NAzBw_LrPpUcWkZD46ybYcbFLwKiuF8-cIKCJWnBV9N93PeNA5IM5aswMxlooKsbuDe3FRLWuMKHrrJPnJsG_Wfk5TKKhSDjq4uc-SVqVRnUGiE1r6Fg8xwdjJTAnn6HQ7tigpqZbnujsQdGGpdgbtZK9Gaxrqh8TsrI" />
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800 p-4 sm:p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img alt="Next.js logo" class="h-10 w-10 sm:h-12 sm:w-12"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyptnox1U9_eAEivN2y3W0YLeU34-zM9dlAbh6quAwblXENgeAdokFTbdiQJcAHXD5BvQLVhbdZUMD7uYfus2r4nntoEsFbkooHFBGBVVE_4pGyLbHSf7B_8q5ucX43p15jTzcXWnfqkyOc10aTXQus4y8DZtskDOK7yJ5MEfxde1LWbAd4B9mURrNDbCvvQJXCsNs4Vt4Ui02kosHC7EAzyP2T2B5t2O-MK3xQgvH28YEemWZkLvLuEmcaZ7OlnJg0obQClYORvc" />
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800 p-4 sm:p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img alt="Tailwind CSS logo" class="h-10 w-10 sm:h-12 sm:w-12"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3CdwBKCWEWrjOOwI1T6eJF4mnrSZdq7ADzuHIQiK9qFOfJowsFp9AsjKI4T-av7Ty3JmYC7TzvnfcWB40qkDnt379UzntqnB8zP_BX3ribI9pDsbfklVKwtFDO5n_f0NtWqscK44PK_VMi8V_8WyTbofYHqsugXlI1VGnfHaHLhkbRycc8rmBeTyC93Hypek7OHlvJuUs6XE6tHqm6lfV6RYMxwg5ZziVbFe9cblifadg61QqsjvgP8axbz99SU9d0e7XLrgDgWw" />
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800 p-4 sm:p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img alt="Node.js logo" class="h-10 w-10 sm:h-12 sm:w-12"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGrRtR6L2XR91mdpv-Z6m2bxgKMDl5tIxCfQDsfCFSSGr2nnE7eZ9A5E_aqDfGIhfRGMd-3HodsU8DJqkGjGfFOzV-Cx98cgiDUQKcEAuoPl7iLwPKsxHfrwjgTiiieFzZBhORlyo5E52YUAdVSnWdU42Ar-qRJxUg6lbUSO4xYtyvHdlqQ2czqRZok3NaMbY4ks-vnvCrDTGqesxy8ms7jNgedmpZIiKnJlLOfVecpkpJjLRTuRgmRnII9-CIltJQpgDl-PJ_WZM" />
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800 p-4 sm:p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img alt="Express.js logo" class="h-10 w-10 sm:h-12 sm:w-12"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA7f5Uzt2klrfyozANXaOFPbMao6DLEYLM1ouiFI1jK_AY3y6qzlK3WcPvsk_sehnjx2yudFcvW10LeKi632sIrFQYNFh88o8ng6PF5Wgvp3Dlp4ua1rykKMTDMjMSH1FndKI4k2lwBMwtHn0xTDBqJR4o1yofkZo3WCMDXX24XN74VwWvWVG9KRvuzByc5igyhn2080MbfaX3NA7Ip8tkB5OZUv3CeX-BWEl7T_iTscKXWsfsChSDYVdgZuFSfg9ZXjRK7s6G7nA" />
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800 p-4 sm:p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img alt="MongoDB logo" class="h-10 w-10 sm:h-12 sm:w-12"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB09exg1n_m34fi9BiXQiAUZ6guWZM0EPXAuHGvQ3GufeV_XJbr4ganVgrSVuq355W_vAXf7xBpekUlHQJ9Ux6zodmga7ssp0erwYApDVgsEVL5OlpA-x8aIhRld1nDBiVslb_X9TJwPQE7Goe7DMXQBjyMvP-zmlJcgCdL-52XWUguhxKa5oE6VnPpnJdq3yZ9xwPknkwp_aVKTawU54uBFIJkfWXrKfuOpIjOgr_ElfrCTFM4KJSufZMtekD9bBjLfEcCz5Re3A0" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="py-16 sm:py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100">
+                            Services
+                        </h2>
+                        <p class="mt-2 text-lg text-slate-600 dark:text-slate-400">
+                            What I offer
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div
+                            class="bg-white dark:bg-slate-800/50 p-8 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="flex items-center justify-center h-16 w-16 bg-blue-100 dark:bg-blue-900/50 rounded-lg mb-6">
+                                <span class="material-icons-outlined text-3xl text-blue-600 dark:text-blue-400">
+                                    grid_view
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-slate-800 dark:text-slate-100 mb-2">
+                                Frontend Development
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-6">
+                                Crafting beautiful and responsive user interfaces that provide an exceptional user
+                                experience.
+                            </p>
+                          
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800/50 p-8 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="flex items-center justify-center h-16 w-16 bg-green-100 dark:bg-green-900/50 rounded-lg mb-6">
+                                <span class="material-icons-outlined text-3xl text-green-600 dark:text-green-400">
+                                    code
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-slate-800 dark:text-slate-100 mb-2">
+                                Backend Development
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-6">
+                                Building robust, scalable, and secure server-side logic and APIs to power your
+                                applications.
+                            </p>
+                         
+                        </div>
+                        <div
+                            class="bg-white dark:bg-slate-800/50 p-8 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="flex items-center justify-center h-16 w-16 bg-indigo-100 dark:bg-indigo-900/50 rounded-lg mb-6">
+                                <span class="material-icons-outlined text-3xl text-indigo-600 dark:text-indigo-400">
+                                    layers
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-slate-800 dark:text-slate-100 mb-2">
+                                Full Stack Development
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-6">
+                                Combining frontend and backend expertise to deliver complete, end-to-end web solutions.
+                            </p>
+                         
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16 md:py-24 relative" id="projects">
+                <div class="absolute inset-0 dark:bg-code-pattern opacity-30"></div>
+                <div class="relative z-10 w-full max-w-5xl mx-auto px-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
+                        <h2 class="text-4xl md:text-5xl font-bold text-text-light dark:text-text-dark mb-4 sm:mb-0">
+                            My Latest <span class="text-primary">Projects</span>
+                        </h2>
+                      
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div
+                            class="bg-background-light/5 dark:bg-background-dark/50 rounded-lg border border-white/10 shadow-lg overflow-hidden group">
+                            <div class="overflow-hidden">
+                                <img alt="Beauty Product Ecommerce Mobile App"
+                                    class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxDR2ebLMipyY6QDKW7OlS9AdpKBvRRgbr9FYkHpICtL9-hrJ04ulrJSNiKPTelXxcYAXRwflX9eqRbkLz3zls0CQakBFjfpPPAl8vzV0RS4ZKyldPxY2jdI6gS4X3bm33QwfqFYTqSunZwo0uManEVltEnZ9Q56O3BexgwFBSMB-mpLorcw-7zSSu0yVOvOIoasfhlWBq8oypD8AzPnsNVd_R4Mkl6FC85ub6M5QYWMUB_CTdO5F3rjhEADDzEkpAlWJDCPzS_tc" />
+                            </div>
+                            <div class="p-6">
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        class="text-xs font-semibold text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">Web
+                                        Development</span>
+                                    <span
+                                        class="text-xs font-semibold text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">Full-stack</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-text-light dark:text-text-dark mb-4">Ecommerce Mobile
+                                    App</h3>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-background-light/5 dark:bg-background-dark/50 rounded-lg border border-white/10 shadow-lg overflow-hidden group">
+                            <div class="overflow-hidden">
+                                <img alt="Beauty Product Mobile App Landing Page"
+                                    class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTGUbRvhwq1EQ3j1LSMYXdvQTV1RwAbOigpoHwsmaVC7e9dR_VX9EW2YgC3xFJQzvRo3a2lYGiyJHVLByHL_W0Uy6XwvT-LOxqQ6rdo0Tztys0k4C-BRaG1IdcN5X3QhdvskJfa64vJnb6eA7oEY9Y1A5r6uZ_OQcGZ0gXpV6_rNwuhiiHVQ4uCroBynfuRefQBfbnzMeBk2LTxOR7HHM8SjpNYl66dtkYWhAPeNMlAzSFPfQ8UCTJjX-D2tJ6XqLfDPzzCAGN-bU" />
+                            </div>
+                            <div class="p-6">
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        class="text-xs font-semibold text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">UI/UX
+                                        Design</span>
+                                    <span
+                                        class="text-xs font-semibold text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">Web
+                                        Design</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-text-light dark:text-text-dark mb-4">Mobile App
+                                    Landing Page</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16 md:py-24 relative" id="education">
+                <div class="absolute inset-0 dark:bg-code-pattern opacity-30"></div>
+                <div class="relative z-10 w-full max-w-5xl mx-auto px-4">
+                    <h2 class="text-4xl md:text-5xl font-bold text-center text-text-light dark:text-text-dark mb-16">
+                        Education
+                    </h2>
+                    <div class="space-y-12">
+                        <div class="relative pl-12 md:pl-16">
+                            <div class="absolute left-0 top-0 h-full border-l-2 border-primary/30"></div>
+                            <div
+                                class="absolute left-[-9px] top-1.5 w-5 h-5 bg-primary rounded-full border-4 border-background-dark">
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-24 md:w-32 text-text-secondary-light dark:text-text-secondary-dark font-semibold text-lg">
+                                    2016-2020</div>
+                                <div class="ml-6 md:ml-8">
+                                    <h3 class="text-2xl font-bold text-text-light dark:text-text-dark">Bachelor of
+                                        Science in Computer Science</h3>
+                                    <p
+                                        class="text-lg text-text-secondary-light dark:text-text-secondary-dark mt-1 mb-2">
+                                        University of Technology</p>
+                                    <p
+                                        class="text-base text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                                        Focused on software development, algorithms, and data structures. Completed a
+                                        final year project on a machine learning-based recommendation system.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative pl-12 md:pl-16">
+                            <div class="absolute left-0 top-0 h-full border-l-2 border-primary/30"></div>
+                            <div
+                                class="absolute left-[-9px] top-1.5 w-5 h-5 bg-primary rounded-full border-4 border-background-dark">
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-24 md:w-32 text-text-secondary-light dark:text-text-secondary-dark font-semibold text-lg">
+                                    2021</div>
+                                <div class="ml-6 md:ml-8">
+                                    <h3 class="text-2xl font-bold text-text-light dark:text-text-dark">Certified
+                                        Full-Stack Web Developer</h3>
+                                    <p
+                                        class="text-lg text-text-secondary-light dark:text-text-secondary-dark mt-1 mb-2">
+                                        Online Coding Bootcamp</p>
+                                    <p
+                                        class="text-base text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                                        Intensive program covering MERN stack (MongoDB, Express.js, React, Node.js).
+                                        Developed several hands-on projects, including a real-time chat application.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 antialiased">
+                <div class="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
+                    <div class="max-w-5xl w-full mx-auto">
+                        <div class="text-center mb-12">
+                            <h1 class="font-display text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">Get in
+                                Touch</h1>
+                            <p class="mt-2 text-lg text-gray-500 dark:text-gray-400">Contact Me</p>
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+                            <div class="lg:col-span-2">
+                                <h2
+                                    class="text-2xl font-semibold mb-6 text-center lg:text-left text-gray-900 dark:text-white">
+                                    Talk to me</h2>
+                                <div class="space-y-6">
+                                    <div class="contact-card">
+                                       
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Email</h3>
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">oliullahakib@gmail.com</p>
+                                        <a class="inline-flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white group"
+                                            href="mailto:oliullahakib@gmail.com">
+                                            Write me
+                                            <span
+                                                class="material-symbols-outlined text-base ml-1 transition-transform group-hover:translate-x-1">➡</span>
+                                        </a>
+                                    </div>
+                                    <div class="contact-card">
+                                        <svg aria-hidden="true" class="w-8 h-8 mx-auto mb-3 text-primary"
+                                            fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                            </path>
+                                        </svg>
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">LinkedIn</h3>
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">oliullahakib</p>
+                                        <a class="inline-flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white group"
+                                            href="#">
+                                            Write me
+                                            <span
+                                                class="material-symbols-outlined text-base ml-1 transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+                                        </a>
+                                    </div>
+                                    <div class="contact-card">
+                                        <svg aria-hidden="true" class="w-8 h-8 mx-auto mb-3 text-primary"
+                                            fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.296 1.634 4.208 3.803 4.649-.665.18-1.37.208-2.063.077.621 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.588-7.52 2.588-.49 0-.974-.028-1.45-.086 2.685 1.732 5.877 2.746 9.322 2.746 10.743 0 16.6-8.91 16.44-16.786.993-.717 1.854-1.616 2.538-2.636z">
+                                            </path>
+                                        </svg>
+                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Twitter</h3>
+                                        <p class="text-gray-500 dark:text-gray-400 mb-4">@NurAdnanChowdhu</p>
+                                        <a class="inline-flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white group"
+                                            href="#">
+                                            Write me
+                                            <span
+                                                class="material-symbols-outlined text-base ml-1 transition-transform group-hover:translate-x-1">arrow_right_alt</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </main>
+    </div>
+
+    <script>
+     
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <footer class="relative py-8">
+        <div class="absolute inset-0 dark:bg-code-pattern opacity-30"></div>
+        <div class="relative z-10 w-full max-w-5xl mx-auto px-4">
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between">
+                <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-4 sm:mb-0">
+                    © 2023 Nahid Hassan. All rights reserved.
+                </p>
+                <div class="flex items-center space-x-6">
+                    <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors duration-300"
+                        href="#">
+                        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path clip-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors duration-300"
+                        href="#">
+                        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors duration-300"
+                        href="#">
+                        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path clip-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.477 2 12.019c0 4.438 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.019C22 6.477 17.523 2 12 2z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
