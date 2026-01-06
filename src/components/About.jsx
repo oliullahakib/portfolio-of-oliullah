@@ -3,9 +3,11 @@ import heroImg from '../assets/hero-image-half.png';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { FaDownload } from 'react-icons/fa';
 
 const About = () => {
     const blobRef = useRef(null);
+    const resumeBtnRef = useRef(null);
 
     useGSAP(() => {
         gsap.to(blobRef.current, {
@@ -15,6 +17,14 @@ const About = () => {
             repeat: -1,
             yoyo: true,
             ease: "sine.inOut"
+        });
+
+        gsap.to(resumeBtnRef.current, {
+            y: -5,
+            duration: 1.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
         });
     });
 
@@ -67,11 +77,34 @@ const About = () => {
                             My expertise spans across the entire development lifecycle, from conceptualization and
                             design to deployment and maintenance. I am proficient in modern technologies like <span
                                 className="text-primary/90">React</span>, <span className="text-primary/90">Node.js</span>,
-                            <span className="text-primary/90">Express.js</span>, and <span
+                            <span className="text-primary/90"> Express.js</span> and <span
                                 className="text-primary/90">MongoDB</span> databases. I thrive on creating seamless
                             digital experiences that not only meet client requirements but also exceed user
                             expectations.
                         </p>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            viewport={{ once: false }}
+                            className="flex justify-center md:justify-start"
+                        >
+                            <motion.a
+                                ref={resumeBtnRef}
+                                href="/Akib-Frontend-Developer.pdf"
+                                download
+                                whileHover={{
+                                    scale: 1.05,
+                                    boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.4)"
+                                }}
+                                whileTap={{ scale: 0.95 }}
+                                className="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-primary text-white rounded-xl font-bold text-lg shadow-xl hover:bg-primary/90 transition-all duration-300 group"
+                            >
+                                <FaDownload className="group-hover:translate-y-0.5 transition-transform duration-300" />
+                                Download Resume
+                            </motion.a>
+                        </motion.div>
                     </motion.div>
                 </div>
             </div>
