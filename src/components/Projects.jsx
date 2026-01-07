@@ -28,10 +28,10 @@ const Projects = () => {
             github: "https://github.com/oliullahakib/haat-bazar.git"
         },
         {
-            title: "styleDecor-modern appointment management system",
-            description: "Style Decor solve the problem that local decoration business.",
+            title: "StyleDecor-modern appointment management system",
+            description: "Style Decor solve the problem that local decoration business have.",
             image: projectImage3,
-            tags: ["React","Express","Firebase","Tailwind CSS", "Framer Motion", "Node.js", "MongoDB"],
+            tags: ["React","Express","Firebase","Tailwind CSS", "Stripe", "Node.js", "MongoDB"],
             live: "https://styledecor-6774e.web.app/",
             github: "https://github.com/oliullahakib/StyleDecor.git"
         }
@@ -114,7 +114,7 @@ const Projects = () => {
                     viewport={{ once: false }}
                     className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold text-text-light dark:text-text-dark mb-4 sm:mb-0">
+                    <h2 className="text-3xl text-center md:text-5xl font-bold text-text-light dark:text-text-dark sm:mb-0">
                         My Latest <span className="text-primary">Projects</span>
                     </h2>
                 </motion.div>
@@ -149,11 +149,11 @@ const Projects = () => {
                                 <h3 className=" font-bold text-text-light dark:text-text-dark mb-2">
                                     {project.title}
                                 </h3>
-                                <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark mt-1 mb-6 leading-relaxed">
+                                <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark mt-1 mb-8 leading-relaxed ">
                                     {project.description}
                                 </p>
 
-                                <div className="flex gap-4">
+                                <div className="flex gap-4  absolute bottom-4">
                                     <motion.a
                                         initial={{ opacity: 0, x: -20 }}
                                         whileInView={{ opacity: 1, x: 0 }}
