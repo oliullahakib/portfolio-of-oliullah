@@ -76,7 +76,8 @@ const About = () => {
                         <p className="mt-4 text-lg text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
                             My expertise spans across the entire development lifecycle, from conceptualization and
                             design to deployment and maintenance. I am proficient in modern technologies like <span
-                                className="text-primary/90">React</span>, <span className="text-primary/90">Node.js</span>,
+                                className="text-primary/90">React</span>, <span
+                                className="text-primary/90">Next.js</span>, <span className="text-primary/90">Node.js</span>,
                             <span className="text-primary/90"> Express.js</span> and <span
                                 className="text-primary/90">MongoDB</span> databases. I thrive on creating seamless
                             digital experiences that not only meet client requirements but also exceed user
