@@ -1,9 +1,9 @@
 import projectImage1 from '../assets/projectImage1.png';
 import projectImage2 from '../assets/projectImage2.png';
 import projectImage3 from '../assets/projectImage3.png';
+import projectImage4 from '../assets/projectImage4.png';
 import { motion } from 'framer-motion';
 import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
 import { useRef } from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -11,6 +11,14 @@ const Projects = () => {
     const containerRef = useRef();
 
     const projects = [
+                {
+            title: "StyleDecor-modern appointment management system",
+            description: "Style Decor solve the problem that local decoration business have.",
+            image: projectImage3,
+            tags: ["React", "Express", "Firebase", "Tailwind CSS", "Stripe", "Node.js", "MongoDB"],
+            live: "https://styledecor-6774e.web.app/",
+            github: "https://github.com/oliullahakib/StyleDecor.git"
+        },
         {
             title: "FinEase - Finance Management Platform",
             description: "This website built to manage your finances. Where you can track your transactions.",
@@ -28,64 +36,18 @@ const Projects = () => {
             github: "https://github.com/oliullahakib/haat-bazar.git"
         },
         {
-            title: "StyleDecor-modern appointment management system",
-            description: "Style Decor solve the problem that local decoration business have.",
-            image: projectImage3,
-            tags: ["React","Express","Firebase","Tailwind CSS", "Stripe", "Node.js", "MongoDB"],
-            live: "https://styledecor-6774e.web.app/",
-            github: "https://github.com/oliullahakib/StyleDecor.git"
+            title: "Hero Kidz - Online Toy Store",
+            description: "Hero Kidz is a single vendor e-commerce web application specifically designed for purchasing toys and kid's products.",
+            image: projectImage4,
+            tags: ["Next.js", "MongoDB", "Tailwind CSS"],
+            live: "https://hero-kidz-jet.vercel.app/",
+            github: "https://github.com/oliullahakib/hero-kidz"
         }
+
     ];
 
     useGSAP(() => {
-        const projectCards = gsap.utils.toArray('.project-card');
-
-        projectCards.forEach((card) => {
-            const githubBtn = card.querySelector('.github-btn');
-            const liveBtn = card.querySelector('.live-btn');
-
-            if (githubBtn) {
-                githubBtn.addEventListener('mouseenter', () => {
-                    gsap.to(githubBtn, {
-                        scale: 1.05,
-                        backgroundColor: '#FB923C',
-                        color: '#FFFFFF',
-                        duration: 0.3,
-                        ease: "power2.out"
-                    });
-                });
-                githubBtn.addEventListener('mouseleave', () => {
-                    gsap.to(githubBtn, {
-                        scale: 1,
-                        backgroundColor: 'transparent',
-                        color: 'inherit',
-                        duration: 0.3,
-                        ease: "power2.out"
-                    });
-                });
-            }
-
-            if (liveBtn) {
-                liveBtn.addEventListener('mouseenter', () => {
-                    gsap.to(liveBtn, {
-                        scale: 1.05,
-                        y: -2,
-                        boxShadow: '0 10px 15px -3px rgba(251, 146, 60, 0.3)',
-                        duration: 0.3,
-                        ease: "power2.out"
-                    });
-                });
-                liveBtn.addEventListener('mouseleave', () => {
-                    gsap.to(liveBtn, {
-                        scale: 1,
-                        y: 0,
-                        boxShadow: 'none',
-                        duration: 0.3,
-                        ease: "power2.out"
-                    });
-                });
-            }
-        });
+        // Removed button hover animations
     }, { scope: containerRef });
 
     const containerVariants = {
@@ -129,7 +91,7 @@ const Projects = () => {
                         <motion.div
                             key={index}
                             variants={itemVariants}
-                            className="project-card bg-background-light/5 dark:bg-background-dark/50 rounded-lg border border-white/10 shadow-lg overflow-hidden group"
+                            className="project-card bg-background-light/5 dark:bg-background-dark/50 rounded-lg border border-white/10 shadow-lg overflow-hidden group flex flex-col"
                         >
                             <div className="overflow-hidden">
                                 <img
@@ -138,7 +100,7 @@ const Projects = () => {
                                     src={project.image}
                                 />
                             </div>
-                            <div className="p-6">
+                            <div className="p-6 flex flex-col flex-grow">
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     {project.tags.map((tag, tagIndex) => (
                                         <span key={tagIndex} className="text-xs font-semibold text-primary bg-primary/10 dark:bg-primary/20 px-3 py-1 rounded-full">
@@ -153,23 +115,17 @@ const Projects = () => {
                                     {project.description}
                                 </p>
 
-                                <div className="flex gap-4  absolute bottom-4">
-                                    <motion.a
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.1 * index + 0.3 }}
+                                <div className="flex flex-wrap gap-4 mt-auto">
+                                    <a
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="github-btn flex items-center gap-2 px-4 py-2 bg-transparent border border-primary/30 rounded-full text-sm font-medium text-white  transition-all duration-300 "
+                                        className="github-btn flex items-center gap-2 px-4 py-2 bg-transparent border border-primary/30 rounded-full text-sm font-medium text-text-light dark:text-text-dark  transition-all duration-300 "
                                     >
-                                        <FaGithub size={18} color='white' />
-                                        <p className="text-white">GitHub</p>
-                                    </motion.a>
-                                    <motion.a
-                                        initial={{ opacity: 0, x: 20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.01 * index + 0.4 }}
+                                        <FaGithub size={18} className="text-text-light dark:text-text-dark" />
+                                        <p>GitHub</p>
+                                    </a>
+                                    <a
                                         href={project.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -177,7 +133,7 @@ const Projects = () => {
                                     >
                                         <FaExternalLinkAlt size={16} />
                                         Live Link
-                                    </motion.a>
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>
