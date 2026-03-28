@@ -2,10 +2,10 @@ import projectImage1 from '../assets/projectImage1.png';
 import projectImage2 from '../assets/projectImage2.png';
 import projectImage3 from '../assets/projectImage3.png';
 import projectImage4 from '../assets/projectImage4.png';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useGSAP } from '@gsap/react';
-import { useRef } from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useRef, useState, useEffect } from 'react';
+import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Projects = () => {
     const containerRef = useRef();
@@ -46,6 +46,40 @@ const Projects = () => {
 
     ];
 
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [itemsToShow, setItemsToShow] = useState(3);
+
+    useEffect(() => {
+        const handleResize = () => {
+            let newItemsToShow = 3;
+            if (window.innerWidth < 768) {
+                newItemsToShow = 1;
+            } else if (window.innerWidth < 1024) {
+                newItemsToShow = 2;
+            }
+            setItemsToShow(newItemsToShow);
+            setCurrentIndex(prev => Math.min(prev, Math.max(0, projects.length - newItemsToShow)));
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [projects.length]);
+
+    const nextProject = () => {
+        if (currentIndex < projects.length - itemsToShow) {
+            setCurrentIndex(prev => prev + 1);
+        }
+    };
+
+    const prevProject = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(prev => prev - 1);
+        }
+    };
+
+    const visibleProjects = projects.slice(currentIndex, currentIndex + itemsToShow);
+
     useGSAP(() => {
         // Removed button hover animations
     }, { scope: containerRef });
@@ -74,25 +108,51 @@ const Projects = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: false }}
-                    className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12"
+                    className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 w-full gap-4"
                 >
                     <h2 className="text-3xl text-center md:text-5xl font-bold text-text-light dark:text-text-dark sm:mb-0">
                         My Latest <span className="text-primary">Projects</span>
                     </h2>
+                    
+                    <div className="flex gap-4 self-end sm:self-auto">
+                        {currentIndex > 0 && (
+                            <button 
+                                onClick={prevProject}
+                                className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-md shadow-primary/20"
+                                aria-label="Previous project"
+                            >
+                                <FaChevronLeft size={20} />
+                            </button>
+                        )}
+                        {currentIndex < projects.length - itemsToShow && (
+                            <button 
+                                onClick={nextProject}
+                                className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-md shadow-primary/20"
+                                aria-label="Next project"
+                            >
+                                <FaChevronRight size={20} />
+                            </button>
+                        )}
+                    </div>
                 </motion.div>
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: false }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                 >
-                    {projects.map((project, index) => (
-                        <motion.div
-                            key={index}
-                            variants={itemVariants}
-                            className="project-card bg-background-light/5 dark:bg-background-dark/50 rounded-lg border border-white/10 shadow-lg overflow-hidden group flex flex-col"
-                        >
+                    <AnimatePresence mode="popLayout">
+                        {visibleProjects.map((project) => (
+                            <motion.div
+                                key={project.title}
+                                layout
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                transition={{ duration: 0.4 }}
+                                className="project-card bg-background-light/5 dark:bg-background-dark/50 rounded-lg border border-white/10 shadow-lg overflow-hidden group flex flex-col h-full"
+                            >
                             <div className="overflow-hidden">
                                 <img
                                     alt={project.title}
@@ -137,7 +197,8 @@ const Projects = () => {
                                 </div>
                             </div>
                         </motion.div>
-                    ))}
+                        ))}
+                    </AnimatePresence>
                 </motion.div>
             </div>
         </div>
