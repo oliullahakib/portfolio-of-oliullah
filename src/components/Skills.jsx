@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
@@ -7,8 +6,6 @@ import { motion } from 'framer-motion';
 
 
 const Skills = () => {
-
-
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -18,7 +15,6 @@ const Skills = () => {
             }
         }
     };
-
     const itemVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 }
@@ -63,7 +59,7 @@ const Skills = () => {
                                 </div>
                             </motion.div>
                             <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} className="flex items-start space-x-3">
-                                <span className="material-symbols-outlined text-primary mt-1"><RiNextjsFill /></span>
+                                <span className="material-symbols-outlined text-white mt-1"><RiNextjsFill /></span>
                                 <div>
                                     <h3 className="font-semibold text-slate-900 dark:text-white">Next.JS</h3>
                                     <p className="text-sm text-slate-500 dark:text-slate-400">Intermediate</p>
