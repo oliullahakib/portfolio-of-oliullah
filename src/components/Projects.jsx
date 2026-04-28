@@ -3,6 +3,8 @@ import projectImage2 from '../assets/projectImage2.png';
 import projectImage3 from '../assets/projectImage3.png';
 import projectImage4 from '../assets/projectImage4.png';
 import projectImage5 from '../assets/projectImage5.png';
+import projectImage6 from '../assets/projectImage6.png';
+import projectImage7 from '../assets/projectImage7.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGSAP } from '@gsap/react';
 import { useRef, useState, useEffect } from 'react';
@@ -51,6 +53,22 @@ const Projects = () => {
             tags: ["Next.js","Tailwind CSS", "Framer Motion"],
             live: "https://paa-project-six.vercel.app/",
             github: "https://github.com/oliullahakib/oliullah-frontend.git"
+        },
+        {
+            title: "Glowave",
+            description: "Glowave is a high-performance SaaS landing page architected for modern brands seeking digital dominance. It combines premium experience design with strategic growth engineering.",
+            image: projectImage6,
+            tags: ["React","Tailwind CSS", "Framer Motion","GSAP"],
+            live: "https://glowave-ol.netlify.app/",
+            github: "https://github.com/oliullahakib/glowave-project.git"
+        },
+        {
+            title: "Al-Quran Web Application",
+            description: "A modern, premium-quality Quran reading web application built with Next.js, TypeScript, and Tailwind CSS. Browse all 114 Surahs, read Arabic text with English translations, search by surah name or verse meaning, and customize your reading experience.",
+            image: projectImage7,
+            tags: ["NextJS","TypeScript","Tailwind CSS"],
+            live: "https://quran-web-app-ivory.vercel.app/",
+            github: "https://github.com/oliullahakib/quran-web-app.git"
         }
 
     ];
