@@ -2,6 +2,7 @@ import projectImage1 from '../assets/projectImage1.png';
 import projectImage2 from '../assets/projectImage2.png';
 import projectImage3 from '../assets/projectImage3.png';
 import projectImage4 from '../assets/projectImage4.png';
+import projectImage5 from '../assets/projectImage5.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGSAP } from '@gsap/react';
 import { useRef, useState, useEffect } from 'react';
@@ -28,6 +29,14 @@ const Projects = () => {
             github: "https://github.com/oliullahakib/finEase-client.git"
         },
         {
+            title: "Hero Kidz - Online Toy Store",
+            description: "Hero Kidz is a single vendor e-commerce web application specifically designed for purchasing toys and kid's products.",
+            image: projectImage4,
+            tags: ["Next.js", "MongoDB", "Tailwind CSS"],
+            live: "https://hero-kidz-jet.vercel.app/",
+            github: "https://github.com/oliullahakib/hero-kidz"
+        },
+        {
             title: "HaatBazar - Raw Products E-Commerce Platform",
             description: "The platform connect farmers directly to consumers, eliminating supply chain intermediaries.",
             image: projectImage2,
@@ -36,12 +45,12 @@ const Projects = () => {
             github: "https://github.com/oliullahakib/haat-bazar.git"
         },
         {
-            title: "Hero Kidz - Online Toy Store",
-            description: "Hero Kidz is a single vendor e-commerce web application specifically designed for purchasing toys and kid's products.",
-            image: projectImage4,
-            tags: ["Next.js", "MongoDB", "Tailwind CSS"],
-            live: "https://hero-kidz-jet.vercel.app/",
-            github: "https://github.com/oliullahakib/hero-kidz"
+            title: "PPA - Project Management Mastery Landing Page",
+            description: "A high-performance, pixel-perfect landing page designed to convert. Built with Next.js 15, Tailwind CSS, and Framer Motion, this project serves as a masterclass in modern web design and interactive storytelling.",
+            image: projectImage5,
+            tags: ["Next.js","Tailwind CSS", "Framer Motion"],
+            live: "https://paa-project-six.vercel.app/",
+            github: "https://github.com/oliullahakib/oliullah-frontend.git"
         }
 
     ];
@@ -111,9 +120,8 @@ const Projects = () => {
                     className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 w-full gap-4"
                 >
                     <h2 className="text-3xl text-center md:text-5xl font-bold text-text-light dark:text-text-dark sm:mb-0">
-                        My Latest <span className="text-primary">Projects</span>
+                        My Latest <span className="text-primary">Projects ({projects?.length})</span>   
                     </h2>
-                    
                     <div className="flex gap-4 self-end sm:self-auto">
                         {currentIndex > 0 && (
                             <button 
