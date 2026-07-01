@@ -3,7 +3,11 @@ import { useGSAP } from '@gsap/react';
 import { useRef, useState, useEffect } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import glowaveImage from '../assets/glowave.png';
-import alQuran from '../assets/al-quran.png';
+import alQuranImage from '../assets/al-quran.png';
+import styleDecorImage from '../assets/styleDecor.png';
+import finEaseImage from '../assets/finEase.png';
+import haatBazarImage from '../assets/hatBazzar.png';
+import heroKidzImage from '../assets/heroKidz.png';
 const Projects = () => {
     const containerRef = useRef();
 
@@ -11,7 +15,7 @@ const Projects = () => {
                 {
             title: "StyleDecor-modern appointment management system",
             description: "Style Decor solve the problem that local decoration business have.",
-            image: "https://portfolio-of-oliullah.netlify.app/assets/projectImage3-CkhBxUXC.png",
+            image: styleDecorImage,
             tags: ["React", "Express", "Firebase", "Tailwind CSS", "Stripe", "Node.js", "MongoDB"],
             live: "https://styledecor-6774e.web.app/",
             github: "https://github.com/oliullahakib/StyleDecor.git"
@@ -19,7 +23,7 @@ const Projects = () => {
         {
             title: "FinEase - Finance Management Platform",
             description: "This website built to manage your finances. Where you can track your transactions.",
-            image: "https://portfolio-of-oliullah.netlify.app/assets/projectImage1-x38skBdv.png",
+            image: finEaseImage,
             tags: ["React", "Express", "Node.js", "MongoDB", "Tailwind CSS"],
             live: "https://finease-d0ad4.web.app/",
             github: "https://github.com/oliullahakib/finEase-client.git"
@@ -27,7 +31,7 @@ const Projects = () => {
         {
             title: "Hero Kidz - Online Toy Store",
             description: "Hero Kidz is a single vendor e-commerce web application specifically designed for purchasing toys and kid's products.",
-            image: "https://portfolio-of-oliullah.netlify.app/assets/projectImage4-Cz_A0iW4.png",
+            image: heroKidzImage,
             tags: ["Next.js", "MongoDB", "Tailwind CSS"],
             live: "https://hero-kidz-jet.vercel.app/",
             github: "https://github.com/oliullahakib/hero-kidz"
@@ -35,7 +39,7 @@ const Projects = () => {
         {
             title: "HaatBazar - Raw Products E-Commerce Platform",
             description: "The platform connect farmers directly to consumers, eliminating supply chain intermediaries.",
-            image: "https://portfolio-of-oliullah.netlify.app/assets/projectImage2-CM8ilUpq.png",
+            image: haatBazarImage,
             tags: ["Next.js", "Express", "Node.js", "MongoDB", "Tailwind CSS"],
             live: "https://haat-bazar-i63a.vercel.app/",
             github: "https://github.com/oliullahakib/haat-bazar.git"
@@ -59,7 +63,7 @@ const Projects = () => {
         {
             title: "Al-Quran Web Application",
             description: "A modern, premium-quality Quran reading web application built with Next.js, TypeScript, and Tailwind CSS. Browse all 114 Surahs, read Arabic text with English translations, search by surah name or verse meaning, and customize your reading experience.",
-            image: alQuran,
+            image: alQuranImage,
             tags: ["NextJS","TypeScript","Tailwind CSS"],
             live: "https://quran-web-app-ivory.vercel.app/",
             github: "https://github.com/oliullahakib/quran-web-app.git"
