@@ -1,15 +1,9 @@
-import projectImage1 from '../assets/projectImage1.png';
-import projectImage2 from '../assets/projectImage2.png';
-import projectImage3 from '../assets/projectImage3.png';
-import projectImage4 from '../assets/projectImage4.png';
-import projectImage5 from '../assets/projectImage5.png';
-import projectImage6 from '../assets/projectImage6.png';
-import projectImage7 from '../assets/projectImage7.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGSAP } from '@gsap/react';
 import { useRef, useState, useEffect } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-
+import glowaveImage from '../assets/glowave.png';
+import alQuran from '../assets/al-quran.png';
 const Projects = () => {
     const containerRef = useRef();
 
@@ -17,7 +11,7 @@ const Projects = () => {
                 {
             title: "StyleDecor-modern appointment management system",
             description: "Style Decor solve the problem that local decoration business have.",
-            image: projectImage3,
+            image: "https://portfolio-of-oliullah.netlify.app/assets/projectImage3-CkhBxUXC.png",
             tags: ["React", "Express", "Firebase", "Tailwind CSS", "Stripe", "Node.js", "MongoDB"],
             live: "https://styledecor-6774e.web.app/",
             github: "https://github.com/oliullahakib/StyleDecor.git"
@@ -25,7 +19,7 @@ const Projects = () => {
         {
             title: "FinEase - Finance Management Platform",
             description: "This website built to manage your finances. Where you can track your transactions.",
-            image: projectImage1,
+            image: "https://portfolio-of-oliullah.netlify.app/assets/projectImage1-x38skBdv.png",
             tags: ["React", "Express", "Node.js", "MongoDB", "Tailwind CSS"],
             live: "https://finease-d0ad4.web.app/",
             github: "https://github.com/oliullahakib/finEase-client.git"
@@ -33,7 +27,7 @@ const Projects = () => {
         {
             title: "Hero Kidz - Online Toy Store",
             description: "Hero Kidz is a single vendor e-commerce web application specifically designed for purchasing toys and kid's products.",
-            image: projectImage4,
+            image: "https://portfolio-of-oliullah.netlify.app/assets/projectImage4-Cz_A0iW4.png",
             tags: ["Next.js", "MongoDB", "Tailwind CSS"],
             live: "https://hero-kidz-jet.vercel.app/",
             github: "https://github.com/oliullahakib/hero-kidz"
@@ -41,7 +35,7 @@ const Projects = () => {
         {
             title: "HaatBazar - Raw Products E-Commerce Platform",
             description: "The platform connect farmers directly to consumers, eliminating supply chain intermediaries.",
-            image: projectImage2,
+            image: "https://portfolio-of-oliullah.netlify.app/assets/projectImage2-CM8ilUpq.png",
             tags: ["Next.js", "Express", "Node.js", "MongoDB", "Tailwind CSS"],
             live: "https://haat-bazar-i63a.vercel.app/",
             github: "https://github.com/oliullahakib/haat-bazar.git"
@@ -49,7 +43,7 @@ const Projects = () => {
         {
             title: "PPA - Project Management Mastery Landing Page",
             description: "A high-performance, pixel-perfect landing page designed to convert. Built with Next.js 15, Tailwind CSS, and Framer Motion, this project serves as a masterclass in modern web design and interactive storytelling.",
-            image: projectImage5,
+            image: "https://res.cloudinary.com/chibackendol/image/upload/v1782931513/paa-project_inzpht.png",
             tags: ["Next.js","Tailwind CSS", "Framer Motion"],
             live: "https://paa-project-six.vercel.app/",
             github: "https://github.com/oliullahakib/oliullah-frontend.git"
@@ -57,7 +51,7 @@ const Projects = () => {
         {
             title: "Glowave",
             description: "Glowave is a high-performance SaaS landing page architected for modern brands seeking digital dominance. It combines premium experience design with strategic growth engineering.",
-            image: projectImage6,
+            image: glowaveImage,
             tags: ["React","Tailwind CSS", "Framer Motion","GSAP"],
             live: "https://glowave-ol.netlify.app/",
             github: "https://github.com/oliullahakib/glowave-project.git"
@@ -65,7 +59,7 @@ const Projects = () => {
         {
             title: "Al-Quran Web Application",
             description: "A modern, premium-quality Quran reading web application built with Next.js, TypeScript, and Tailwind CSS. Browse all 114 Surahs, read Arabic text with English translations, search by surah name or verse meaning, and customize your reading experience.",
-            image: projectImage7,
+            image: alQuran,
             tags: ["NextJS","TypeScript","Tailwind CSS"],
             live: "https://quran-web-app-ivory.vercel.app/",
             github: "https://github.com/oliullahakib/quran-web-app.git"
