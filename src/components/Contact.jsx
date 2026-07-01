@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 import { FaArrowRight, FaGithub } from 'react-icons/fa';
 import { IoLogoLinkedin } from 'react-icons/io';
 import { MdEmail } from 'react-icons/md';
@@ -13,10 +15,54 @@ const initialFormState = {
 
 const Contact = () => {
     const [formData, setFormData] = useState(initialFormState);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
+    const [submitMessage, setSubmitMessage] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+        if (!serviceId || !templateId || !publicKey) {
+            toast.error('Email service is not configured. Please add your EmailJS credentials.');
+            return;
+        }
+
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+        setSubmitMessage('');
+
+        try {
+            await emailjs.send(
+                serviceId,
+                templateId,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    subject: formData.subject || 'Portfolio contact',
+                    message: formData.message,
+                },
+                publicKey
+            );
+
+            setSubmitStatus('success');
+            toast.success('Message sent successfully! I will get back to you soon.');
+            setFormData(initialFormState);
+        } catch (error) {
+            console.error('EmailJS error:', error);
+            setSubmitStatus('error');
+            setSubmitMessage('Failed to send message. Please try again or email me directly.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const containerVariants = {
@@ -109,8 +155,7 @@ const Contact = () => {
                                 Send a message
                             </h2>
                             <form
-                                action="https://formspree.io/f/meebrpbb"
-                                method="POST"
+                                onSubmit={handleSubmit}
                                 className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg space-y-5"
                             >
                                 <div>
@@ -172,11 +217,24 @@ const Contact = () => {
                                         className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent text-gray-900 dark:text-white placeholder:text-gray-400 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none"
                                     />
                                 </div>
+                                {submitMessage && (
+                                    <p
+                                        role="status"
+                                        className={`text-sm ${
+                                            submitStatus === 'success'
+                                                ? 'text-green-600 dark:text-green-400'
+                                                : 'text-red-600 dark:text-red-400'
+                                        }`}
+                                    >
+                                        {submitMessage}
+                                    </p>
+                                )}
                                 <button
                                     type="submit"
-                                    className="inline-flex items-center gap-2 py-2.5 px-6 bg-primary text-white rounded-full hover:opacity-90 transition-all font-medium"
+                                    disabled={isSubmitting}
+                                    className="inline-flex items-center gap-2 py-2.5 px-6 bg-primary text-white rounded-full hover:opacity-90 transition-all font-medium disabled:opacity-60 disabled:cursor-not-allowed"
                                 >
-                                    Send message
+                                    {isSubmitting ? 'Sending...' : 'Send message'}
                                     <FaArrowRight className="text-sm" />
                                 </button>
                             </form>

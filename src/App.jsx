@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Toaster } from 'react-hot-toast';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -34,6 +35,18 @@ function App() {
 
   return (
     <div className="font-display bg-background-light dark:bg-background-dark min-h-screen">
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          className: '!bg-white dark:!bg-gray-900 !text-gray-900 dark:!text-gray-100 !border !border-gray-200 dark:!border-gray-700',
+          error: {
+            iconTheme: {
+              primary: '#ef4444',
+              secondary: '#fff',
+            },
+          },
+        }}
+      />
       <Navbar />
       <Hero />
       <About />
