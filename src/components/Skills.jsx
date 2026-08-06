@@ -1,7 +1,7 @@
 import { FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
-import { SiExpress, SiMongodb } from 'react-icons/si';
+import { SiExpress, SiMongodb, SiPostgresql } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
 
@@ -62,7 +62,7 @@ const Skills = () => {
                                 <span className="material-symbols-outlined text-white mt-1"><RiNextjsFill /></span>
                                 <div>
                                     <h3 className="font-semibold text-slate-900 dark:text-white">Next.JS</h3>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Intermediate</p>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400">Expert</p>
                                 </div>
                             </motion.div>
 
@@ -70,7 +70,7 @@ const Skills = () => {
                                 <span className="material-symbols-outlined text-blue-500 mt-1"><RiTailwindCssFill /></span>
                                 <div>
                                     <h3 className="font-semibold text-slate-900 dark:text-white">Tailwind CSS</h3>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Intermediate</p>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400">Expert</p>
                                 </div>
                             </motion.div>
                             <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} className="flex items-start space-x-3">
@@ -118,7 +118,7 @@ const Skills = () => {
                                 <span className="material-symbols-outlined text-primary mt-1"><SiExpress /></span>
                                 <div>
                                     <h3 className="font-semibold text-slate-900 dark:text-white">Express.JS</h3>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Intermediate</p>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400">Expert</p>
                                 </div>
                             </motion.div>
 
@@ -127,6 +127,13 @@ const Skills = () => {
                                 <div>
                                     <h3 className="font-semibold text-slate-900 dark:text-white">MongoDB</h3>
                                     <p className="text-sm text-slate-500 dark:text-slate-400">Intermediate</p>
+                                </div>
+                            </motion.div>
+                            <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} className="flex items-start space-x-3">
+                                <span className="material-symbols-outlined text-blue-600 mt-1"><SiPostgresql /></span>
+                                <div>
+                                    <h3 className="font-semibold text-slate-900 dark:text-white">PostgreSQL</h3>
+                                    <p className="text-sm text-slate-500 dark:text-slate-400">Beginner</p>
                                 </div>
                             </motion.div>
 

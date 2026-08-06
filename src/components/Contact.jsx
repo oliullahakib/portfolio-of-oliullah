@@ -81,7 +81,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 antialiased">
+        <section id="contact" className="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 antialiased overflow-hidden">
             <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
                 <div className="max-w-6xl w-full mx-auto">
                     <motion.div
